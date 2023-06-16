@@ -2,6 +2,8 @@ import React from 'react'
 import Header from '../../Components/Navbar/Navbar'
 import Navigator from '../../Components/Navigator/Navigator'
 import HeroSec from '../../Components/HeroSec/HeroSec'
+import Category from '../../Components/Category/Category'
+import Products from '../../Components/Products/Products'
 
 function Homepage() {
   return (
@@ -9,6 +11,8 @@ function Homepage() {
         <Header/>
         <Navigator/>
         <HeroSec/>
+        <Category/>
+        <Products/>
     </div>
   )
 }

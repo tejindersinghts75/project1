@@ -55,3 +55,10 @@ a#basic-nav-dropdown {
   padding-left: 20px;
 }
 
+.categoryImg{
+  width: 100px;
+  border-radius: 100%;
+  border: 1px solid;
+  padding: 25px;
+  margin: 50px;
+}
