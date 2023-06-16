@@ -1,19 +1,30 @@
 {
   "files": {
-    "main.css": "/project1/static/css/main.1abcfebb.css",
-    "main.js": "/project1/static/js/main.c96a09ac.js",
+    "main.css": "/project1/static/css/main.427fdf5e.css",
+    "main.js": "/project1/static/js/main.d863e5fc.js",
     "static/js/787.d3befce1.chunk.js": "/project1/static/js/787.d3befce1.chunk.js",
     "static/media/banner-2.2.png": "/project1/static/media/banner-2.2.16b667aa86885834ae36.png",
     "static/media/banner-1.1.png": "/project1/static/media/banner-1.1.66d84c634ca7057340c9.png",
     "static/media/logo-2.svg": "/project1/static/media/logo-2.9b09b2cbcedf2e7be770da64c60feeeb.svg",
+    "static/media/lamp1-svgrepo-com.svg": "/project1/static/media/lamp1-svgrepo-com.d5f6d1b381b1483d1a31fc698928baba.svg",
+    "static/media/bed-double-svgrepo-com.svg": "/project1/static/media/bed-double-svgrepo-com.7329d85de616ec61f5d7f87d3caba023.svg",
+    "static/media/cupboard-tv-svgrepo-com.svg": "/project1/static/media/cupboard-tv-svgrepo-com.0bf16a222ea83f6f295b5a62203df35c.svg",
     "static/media/logo.svg": "/project1/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "static/media/drawers-furniture-and-household-svgrepo-com.svg": "/project1/static/media/drawers-furniture-and-household-svgrepo-com.bcf58955e7963a789e0287bba208386d.svg",
+    "static/media/kitchen-room-svgrepo-com.svg": "/project1/static/media/kitchen-room-svgrepo-com.34b0b9711ac43c0c75b1bc464460728f.svg",
+    "static/media/library-table-svgrepo-com.svg": "/project1/static/media/library-table-svgrepo-com.ab91346e4b444fadc79aecafcb902e82.svg",
+    "static/media/sofa.svg": "/project1/static/media/sofa.a8ad5489582dc4bd95c1fde5f9f16ddd.svg",
+    "static/media/dressing-table-table-svgrepo-com.svg": "/project1/static/media/dressing-table-table-svgrepo-com.059849f7f0877325837fec6be8a69e30.svg",
+    "static/media/dining-room-svgrepo-com.svg": "/project1/static/media/dining-room-svgrepo-com.eed86d7c5cc7b2ff5460b7f972227d03.svg",
+    "static/media/office-reader-svgrepo-com.svg": "/project1/static/media/office-reader-svgrepo-com.f8777a5de6f01e08c5ab0345801d0cb7.svg",
     "index.html": "/project1/index.html",
-    "main.1abcfebb.css.map": "/project1/static/css/main.1abcfebb.css.map",
-    "main.c96a09ac.js.map": "/project1/static/js/main.c96a09ac.js.map",
+    "static/media/door-enter-svgrepo-com.svg": "/project1/static/media/door-enter-svgrepo-com.9ad64cb5d591a2bce222d1e8f0961fc4.svg",
+    "main.427fdf5e.css.map": "/project1/static/css/main.427fdf5e.css.map",
+    "main.d863e5fc.js.map": "/project1/static/js/main.d863e5fc.js.map",
     "787.d3befce1.chunk.js.map": "/project1/static/js/787.d3befce1.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.1abcfebb.css",
-    "static/js/main.c96a09ac.js"
+    "static/css/main.427fdf5e.css",
+    "static/js/main.d863e5fc.js"
   ]
 }
