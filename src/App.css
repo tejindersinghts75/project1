@@ -62,3 +62,7 @@ a#basic-nav-dropdown {
   padding: 25px;
   margin: 50px;
 }
+.img-canvas{
+  height: 250px;
+  object-fit: cover;
+}
