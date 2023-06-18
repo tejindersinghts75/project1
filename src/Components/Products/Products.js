@@ -41,7 +41,7 @@ function Products() {
               <Card.Img className='img-canvas' variant="top" src={item.thumbnail} />
               <Card.Body>
                 <Card.Title>{item.title}</Card.Title>
-                <Card.Text className='d-flex text-center'><p>$</p>{item.price}</Card.Text>
+                <Card.Text className='d-flex text-center     '><p>$</p>{item.price}</Card.Text>
                 <Button variant="primary">Go somewhere</Button>
               </Card.Body>
             </Card>
