@@ -42,7 +42,7 @@ function Products() {
               <Card.Body>
                 <Card.Title>{item.title}</Card.Title>
                 <Card.Text className='d-flex text-center     '><p>$</p>{item.price}</Card.Text>
-                <Button variant="primary">Go somewhere</Button>
+                <Button variant="primary">Add  to cart</Button>
               </Card.Body>
             </Card>
             </div>
