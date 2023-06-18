@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/project1/static/css/main.427fdf5e.css",
-    "main.js": "/project1/static/js/main.d863e5fc.js",
+    "main.css": "/project1/static/css/main.e17e4c19.css",
+    "main.js": "/project1/static/js/main.8b7ee8bb.js",
     "static/js/787.d3befce1.chunk.js": "/project1/static/js/787.d3befce1.chunk.js",
     "static/media/banner-2.2.png": "/project1/static/media/banner-2.2.16b667aa86885834ae36.png",
     "static/media/banner-1.1.png": "/project1/static/media/banner-1.1.66d84c634ca7057340c9.png",
@@ -19,12 +19,12 @@
     "static/media/office-reader-svgrepo-com.svg": "/project1/static/media/office-reader-svgrepo-com.f8777a5de6f01e08c5ab0345801d0cb7.svg",
     "index.html": "/project1/index.html",
     "static/media/door-enter-svgrepo-com.svg": "/project1/static/media/door-enter-svgrepo-com.9ad64cb5d591a2bce222d1e8f0961fc4.svg",
-    "main.427fdf5e.css.map": "/project1/static/css/main.427fdf5e.css.map",
-    "main.d863e5fc.js.map": "/project1/static/js/main.d863e5fc.js.map",
+    "main.e17e4c19.css.map": "/project1/static/css/main.e17e4c19.css.map",
+    "main.8b7ee8bb.js.map": "/project1/static/js/main.8b7ee8bb.js.map",
     "787.d3befce1.chunk.js.map": "/project1/static/js/787.d3befce1.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.427fdf5e.css",
-    "static/js/main.d863e5fc.js"
+    "static/css/main.e17e4c19.css",
+    "static/js/main.8b7ee8bb.js"
   ]
 }
