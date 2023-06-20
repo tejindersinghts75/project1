@@ -17,6 +17,7 @@ function Counter() {
     <>
     <div>Counter</div>
     <div>{counter}</div>
+    <button onClick={decrementHandler}>Decrement</button>
     </>
   )
 }

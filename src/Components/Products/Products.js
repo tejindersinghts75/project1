@@ -2,10 +2,18 @@ import React, { useEffect, useState } from 'react'
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import '../../App.css'
+import { useSelector, useDispatch } from 'react-redux'
+import { counterActions } from '../../Store/Counter'
 
 function Products() {
   // State initialization
   const [data, setData] = useState([])
+  const dispatch = useDispatch();
+  const counter = useSelector(state => state.counter.counter)
+
+  const incrementHandler = () =>{
+    dispatch(counterActions.increment());
+}
 
   // Fetch data when the component mounts
   useEffect(() => {
@@ -41,8 +49,8 @@ function Products() {
               <Card.Img className='img-canvas' variant="top" src={item.thumbnail} />
               <Card.Body>
                 <Card.Title>{item.title}</Card.Title>
-                <Card.Text className='d-flex text-center     '><p>$</p>{item.price}</Card.Text>
-                <Button variant="primary">Add  to cart</Button>
+                <Card.Text className='d-flex text-center'><p>$</p>{item.price}</Card.Text>
+                <Button variant="primary" onClick={incrementHandler}>Add  to cart</Button>
               </Card.Body>
             </Card>
             </div>

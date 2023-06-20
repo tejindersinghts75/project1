@@ -4,9 +4,12 @@ import { FaShoppingCart } from "react-icons/fa";
 import logo from '../../Assets/logo-2.svg'
 import { Badge } from "react-bootstrap";
 import '../../App.css'
+import { counterActions } from '../../Store/Counter'
+import { useSelector, useDispatch } from 'react-redux'
 
 
 const Header = () => {
+  const counter = useSelector(state => state.counter.counter)
   return (
     <Navbar bg="light" variant="dark" expand="lg" className="sticky-top">
       <Container className="my-3">
@@ -21,8 +24,8 @@ const Header = () => {
             <Button variant="outline-dark" className="srchbtn">Search</Button>
           </Form>
           <div>
-      <FaShoppingCart size={20} />
-     
+      <FaShoppingCart size={20}/>
+      <span class="badge-count">{counter}</span>
     </div>
           
         </Navbar.Collapse>

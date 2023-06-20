@@ -14,7 +14,7 @@ function Homepage() {
         <HeroSec/>
         <Category/>
         <Products/>
-        <Counter/>
+
     </div>
   )
 }
