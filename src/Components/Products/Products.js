@@ -3,18 +3,15 @@ import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import '../../App.css'
 import { useSelector, useDispatch } from 'react-redux'
-import { counterActions } from '../../Store/Counter'
+import { addToCart } from '../../Store/Counter'
 
 function Products() {
   // State initialization
   const [data, setData] = useState([])
   const dispatch = useDispatch();
-  const counter = useSelector(state => state.counter.counter)
-
-  const incrementHandler = () =>{
-    dispatch(counterActions.increment());
-}
-
+  const counter = useSelector(state => state.counter)
+  console.log(counter)
+  
   // Fetch data when the component mounts
   useEffect(() => {
     fetchData()
@@ -33,7 +30,12 @@ function Products() {
       console.log('Error fetching data', error)
     }
   }
-  const limit = 8
+  const limit = 8;
+  const handleAddToCart = (item) =>{
+    dispatch(addToCart(item));
+}
+
+  
 
   // Render products
   return (
@@ -50,7 +52,7 @@ function Products() {
               <Card.Body>
                 <Card.Title>{item.title}</Card.Title>
                 <Card.Text className='d-flex text-center'><p>$</p>{item.price}</Card.Text>
-                <Button variant="primary" onClick={incrementHandler}>Add  to cart</Button>
+                <Button variant="primary" onClick={()=> handleAddToCart(item)}> Add  to cart</Button>
               </Card.Body>
             </Card>
             </div>
