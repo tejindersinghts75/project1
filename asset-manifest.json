@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/project1/static/css/main.e17e4c19.css",
-    "main.js": "/project1/static/js/main.24423420.js",
+    "main.js": "/project1/static/js/main.6109777d.js",
     "static/js/787.d3befce1.chunk.js": "/project1/static/js/787.d3befce1.chunk.js",
     "static/media/banner-2.2.png": "/project1/static/media/banner-2.2.16b667aa86885834ae36.png",
     "static/media/banner-1.1.png": "/project1/static/media/banner-1.1.66d84c634ca7057340c9.png",
@@ -20,11 +20,11 @@
     "index.html": "/project1/index.html",
     "static/media/door-enter-svgrepo-com.svg": "/project1/static/media/door-enter-svgrepo-com.9ad64cb5d591a2bce222d1e8f0961fc4.svg",
     "main.e17e4c19.css.map": "/project1/static/css/main.e17e4c19.css.map",
-    "main.24423420.js.map": "/project1/static/js/main.24423420.js.map",
+    "main.6109777d.js.map": "/project1/static/js/main.6109777d.js.map",
     "787.d3befce1.chunk.js.map": "/project1/static/js/787.d3befce1.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e17e4c19.css",
-    "static/js/main.24423420.js"
+    "static/js/main.6109777d.js"
   ]
 }
