@@ -40,7 +40,7 @@ function Products() {
   // Render products
   return (
     <div>
-      
+     
       {data ? (
         <div className='container'>
          <h1 className='text-start my-5'>My Products</h1>
