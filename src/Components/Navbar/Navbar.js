@@ -7,7 +7,7 @@ import '../../App.css'
 import { counterActions } from '../../Store/Counter'
 import { useSelector, useDispatch } from 'react-redux'
 import Dropdown from 'react-bootstrap/Dropdown';
-
+import { BrowserRouter, Routes, Route,Link } from 'react-router-dom';
 
 
 const Header = () => {
@@ -36,12 +36,12 @@ const Header = () => {
       <Dropdown.Menu style={{width:"300px"}}>
        
        {
-        counter.map((item)=>{
+        counter.map((item,id)=>{
           return(
               <>
               <tr>
                 <td>
-                  <img src={item.thumbnail} style={{width:"5rem"}}/>
+                 <Link to={`/ProductPage/${item.id}`}> <img src={item.thumbnail} style={{width:"5rem"}}/></Link>
                 </td>
                 <td>
                  <p>{item.title}</p> 

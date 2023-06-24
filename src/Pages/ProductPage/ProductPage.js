@@ -1,10 +1,13 @@
 import React from 'react'
 import Table from 'react-bootstrap/Table'
 import { useSelector } from 'react-redux'
+import { useParams } from 'react-router'
 
 
 function ProductPage() {
   const counter = useSelector(state => state.counter)
+  const  {id} = useParams();
+  console.log(id);
   return (
     <>
       <div className="container mt-2">

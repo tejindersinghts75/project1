@@ -45,11 +45,12 @@ function Products() {
         <div className='container'>
          <h1 className='text-start my-5'>My Products</h1>
         <div className='row '>
-          {data.slice(0,limit).map((item) => (
+          {data.slice(0,limit).map((item,id) => (
             <div className='col-md-3'>
             <Card key={item.id} style={{ width: '18rem' }}  >
               <Card.Img className='img-canvas' variant="top" src={item.thumbnail} />
               <Card.Body>
+                <div>{item.id}</div>
                 <Card.Title>{item.title}</Card.Title>
                 <Card.Text className='d-flex text-center'><p>$</p>{item.price}</Card.Text>
                 <Button variant="primary" onClick={()=> handleAddToCart(item)}> Add  to cart</Button>
