@@ -9,8 +9,7 @@ import Counter from '../../Components/Counter/Counter'
 function Homepage() {
   return (
     <div>
-        <Header/>
-        <Navigator/>
+        
         <HeroSec/>
         <Category/>
         <Products/>

@@ -2,6 +2,7 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
+import { BrowserRouter, Routes, Route,Link } from 'react-router-dom';
 
 function Navigator() {
   return (
@@ -22,8 +23,8 @@ function Navigator() {
                 Separated link
               </NavDropdown.Item>
             </NavDropdown>  
-            <Nav.Link className='text-white mx-3' href="#home">HomePage</Nav.Link>
-            <Nav.Link className='text-white mx-3' href="#link">Shop</Nav.Link>
+           <Link to='/'> <Nav.Link className='text-white mx-3' href="#home">HomePage</Nav.Link></Link>
+            <Link to='/ProductPage'><Nav.Link className='text-white mx-3' href="#link">Shop</Nav.Link></Link>
             <Nav.Link className='text-white mx-3' href="#home">About</Nav.Link>
             <Nav.Link className='text-white mx-3' href="#link">Blog</Nav.Link>
             
