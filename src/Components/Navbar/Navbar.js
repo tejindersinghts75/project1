@@ -1,17 +1,41 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Navbar, Container, Nav, Form, Button } from "react-bootstrap";
 import { FaShoppingCart } from "react-icons/fa";
 import logo from '../../Assets/logo-2.svg'
-import { Badge } from "react-bootstrap";
 import '../../App.css'
-import { counterActions } from '../../Store/Counter'
 import { useSelector, useDispatch } from 'react-redux'
 import Dropdown from 'react-bootstrap/Dropdown';
 import { BrowserRouter, Routes, Route,Link } from 'react-router-dom';
+import { delCounter } from "../../Store/Counter";
+
+
+
 
 
 const Header = () => {
+  const[price, setPrice] =  useState(0)
+  console.log(price);
   const counter = useSelector(state => state.counter)
+  const dispatch = useDispatch();
+
+  
+  const removeItem = (item) => {
+    dispatch(delCounter(item));
+  };
+
+
+    const total = () =>{
+      let price = 0;
+      counter.map((item,k)=>{
+        price = item.price + price
+      })
+      setPrice(price)
+    }
+
+    useEffect(()=>{
+      total()
+    },[total])
+  
   return (
     <Navbar bg="light" variant="dark" expand="lg" className="sticky-top">
       <Container className="my-3">
@@ -46,13 +70,17 @@ const Header = () => {
                 <td>
                  <p>{item.title}</p> 
                  <p>Rs{item.price}</p>
+                 <p>Quanity{item.quantity}</p>
+                 
                 </td>
+                <i onClick={()=> removeItem(item.id)}><FaShoppingCart size={20}/></i>
               </tr>
+              
               </>
           )
         })
        }
-        
+        <h3>{price}</h3>
       </Dropdown.Menu>
     </Dropdown>
     </div>

@@ -1,12 +1,25 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Table from 'react-bootstrap/Table'
 import { useSelector } from 'react-redux'
 import { useParams } from 'react-router'
 
 
 function ProductPage() {
+  const [set, setState]=  useState([])
+  console.log(set)
   const counter = useSelector(state => state.counter)
   const  {id} = useParams();
+
+  const compare = () =>{
+    let compareData = counter.filter((item)=>{
+      return item.id == id
+    })
+    setState(compareData)
+  }
+
+  useEffect(()=>{
+    compare();
+  },[id])
   console.log(id);
   return (
     <>
@@ -18,7 +31,7 @@ function ProductPage() {
         <section className='container mt-3'>
           <div className="iteamsdetails">
           {
-            counter.map((item)=>{
+            set.map((item)=>{
               return (
                 <>
                 <div className="items_img">
@@ -45,6 +58,7 @@ function ProductPage() {
                     <p><strong>Rating :</strong> <span style={{background:"green",color:"#fff",padding:"2px 5px",borderRadius:"5px"}}>{item.rating} ★	</span></p>
                     <p><strong>Order Review :</strong> <span >{item.somedata}	</span></p>
                     <p><strong>Remove :</strong> <span ><i className='fas fa-trash' ></i>	</span></p>
+                    <p><strong>Quanity :</strong> <span >{set.quantity}	</span></p>
                   </td>
                 </tr>
               </Table>
