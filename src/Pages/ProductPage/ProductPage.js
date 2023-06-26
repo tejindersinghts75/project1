@@ -3,7 +3,7 @@ import Table from 'react-bootstrap/Table'
 import { useDispatch, useSelector } from 'react-redux'
 import { useParams } from 'react-router'
 import { addToCart } from '../../Store/Counter'
-import {ItemDecrease} from '../../Store/Counter'
+import {ItemDecrease, delCounter} from '../../Store/Counter'
 
 
 function ProductPage() {
@@ -31,6 +31,10 @@ const dispatch = useDispatch()
   const decreaseQuantity=(item)=>{
     dispatch(ItemDecrease(item))
   }
+
+  const removeItem=(item)=>{
+    dispatch(delCounter(item))
+  }
   return (
     <>
       <div className="container mt-2">
@@ -57,7 +61,7 @@ const dispatch = useDispatch()
                     <p> <strong>Dishes</strong>  : </p>
                     <p> <strong>Total</strong>  :</p>
                     <div className='mt-5 d-flex justify-content-between align-items-center' style={{width:100,cursor:"pointer",background:"#ddd",color:"#111"}}>
-                    <span style={{fontSize:24}} onClick={()=>decreaseQuantity(item)}>-</span>
+                    <span style={{fontSize:24}} onClick={item.quantity <= 1 ? ()=>removeItem(item) : ()=>decreaseQuantity(item)}>-</span>
                     <span style={{fontSize:22}}>{item.quantity}</span>
                     <span style={{fontSize:24}} onClick={()=>clickToAdd(item)}>+</span>
 
