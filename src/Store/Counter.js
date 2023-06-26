@@ -8,12 +8,12 @@ const counterSlice = createSlice({
             const indexItem = state.findIndex((index)=>index.id === action.payload.id)
             if(indexItem >= 0)
             {
-                 state[indexItem].quantity += 1;
+                  state[indexItem].quantity += 1;
                
             }
             else{
-            const indexItem = action.payload;
-            state.push(indexItem)
+                const newItem = { ...action.payload, quantity: 1 }; // Add quantity property to the item
+                state.push(newItem);
             }
         },
 
@@ -23,9 +23,20 @@ const counterSlice = createSlice({
             const newItem = action.payload;
             return state.filter(item => item.id !== newItem);
         },
+
+        ItemDecrease:(state, action) => {
+            const indexItem_dec = state.findIndex((index) => index.id === action.payload.id)
+            if(state[indexItem_dec].quantity >= 1)
+            {
+              const deletItems=  state[indexItem_dec].quantity -= 1
+              console.log([...state, deletItems])
+            }
+
+        }
+        
     },
 
 });
-export const { addToCart, delCounter } = counterSlice.actions;
+export const { addToCart, delCounter,ItemDecrease } = counterSlice.actions;
 
 export default counterSlice.reducer;

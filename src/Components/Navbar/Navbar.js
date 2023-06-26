@@ -5,7 +5,7 @@ import logo from '../../Assets/logo-2.svg'
 import '../../App.css'
 import { useSelector, useDispatch } from 'react-redux'
 import Dropdown from 'react-bootstrap/Dropdown';
-import { BrowserRouter, Routes, Route,Link } from 'react-router-dom';
+import { BrowserRouter, Routes, Route,Link, useNavigate } from 'react-router-dom';
 import { delCounter } from "../../Store/Counter";
 
 
@@ -17,6 +17,11 @@ const Header = () => {
   console.log(price);
   const counter = useSelector(state => state.counter)
   const dispatch = useDispatch();
+
+  let history = useNavigate()
+  const historyDelet = () =>{
+    history("/")
+  }
 
   
   const removeItem = (item) => {
@@ -73,7 +78,7 @@ const Header = () => {
                  <p>Quanity{item.quantity}</p>
                  
                 </td>
-                <i onClick={()=> removeItem(item.id)}><FaShoppingCart size={20}/></i>
+                <i onClick={()=> removeItem(item.id)}><FaShoppingCart size={20}/>{historyDelet}</i>
               </tr>
               
               </>
