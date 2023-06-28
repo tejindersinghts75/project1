@@ -1,15 +1,24 @@
-const { MongoClient } = require('mongodb');
-const url = "mongodb://localhost:27017";
-const database = 'Shadow';
-const client = new MongoClient(url);
+const mongoose = require('mongoose');
+
+const username = 'tejindersinghts75';
+const password = 'Macoshark@123';
+const database = 'sample_mflix';
+
+const uri = `mongodb+srv://${encodeURIComponent(username)}:${encodeURIComponent(password)}@cluster0.bf9sszk.mongodb.net/${database}`;
+
+const connectToMongo = async () => {
+  try {
+    await mongoose.connect(uri, {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+    });
+    console.log('Connected to MongoDB successfully');
+  } catch (error) {
+    console.error('Error connecting to MongoDB:', error);
+  }
+};
 
 
 
-async function getData() {
-    let result = await client.connect();
-    let db = result.db('database')
-    let collection = db.collection('inventory')
-    console.log(collection.find({}.toArray()))
-}
 
-getData();
+module.exports = connectToMongo;
