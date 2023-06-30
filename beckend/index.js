@@ -7,7 +7,7 @@ connectToMongo();
 const app =  express()
 const port = 3000
 
-app.get('/', (req, res)=>res.send('hello teji'))
+app.get('/api/auth', (req, res)=>res.send('hello teji'))
 
 const startServer = async(port)=>{
     await app.listen(port);

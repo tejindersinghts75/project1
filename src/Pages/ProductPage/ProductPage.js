@@ -14,8 +14,9 @@ function ProductPage() {
 const dispatch = useDispatch()
   const compare = () =>{
     let compareData = counter.filter((item)=>{
-      return item.id == id
-    })
+      return item.id == id;
+})
+
     setState(compareData)
   }
 
@@ -45,7 +46,7 @@ const dispatch = useDispatch()
         <section className='container mt-3'>
           <div className="iteamsdetails">
           {
-            set.map((item)=>{
+            set.map((item,id)=>{
               return (
                 <>
                 <div className="items_img">
@@ -61,7 +62,7 @@ const dispatch = useDispatch()
                     <p> <strong>Dishes</strong>  : </p>
                     <p> <strong>Total</strong>  :</p>
                     <div className='mt-5 d-flex justify-content-between align-items-center' style={{width:100,cursor:"pointer",background:"#ddd",color:"#111"}}>
-                    <span style={{fontSize:24}} onClick={item.quantity <= 1 ? ()=>removeItem(item) : ()=>decreaseQuantity(item)}>-</span>
+                    <span style={{fontSize:24}} onClick={item.quantity <= 1 ? ()=> removeItem(item) : ()=>decreaseQuantity(item)}>-</span>
                     <span style={{fontSize:22}}>{item.quantity}</span>
                     <span style={{fontSize:24}} onClick={()=>clickToAdd(item)}>+</span>
 
