@@ -9,7 +9,7 @@ import {ItemDecrease, delCounter} from '../../Store/Counter'
 function ProductPage() {
   const [set, setState]=  useState([])
   console.log(set)
-  const counter = useSelector(state => state.counter)
+  const counter = useSelector(state => state.counter.cart)
   const  {id} = useParams();
 const dispatch = useDispatch()
   const compare = () =>{
@@ -22,7 +22,7 @@ const dispatch = useDispatch()
 
   useEffect(()=>{
     compare();
-  },[id])
+  },[counter,id])
   console.log(id);
 
   const clickToAdd=(item)=>{

@@ -15,7 +15,7 @@ import { delCounter } from "../../Store/Counter";
 const Header = () => {
   const[price, setPrice] =  useState(0)
   console.log(price);
-  const counter = useSelector(state => state.counter)
+  const counter = useSelector(state => state.counter.cart)
   const dispatch = useDispatch();
 
   let history = useNavigate()

@@ -2,18 +2,18 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const counterSlice = createSlice({
     name: 'counter',
-    initialState: [],
+    initialState: {cart:[]},
     reducers: {
         addToCart: (state, action) => {
-            const indexItem = state.findIndex((index)=>index.id === action.payload.id)
+            const indexItem = state.cart.findIndex((index)=>index.id === action.payload.id)
             if(indexItem >= 0)
             {
-                  state[indexItem].quantity += 1;
+                  state.cart[indexItem].quantity += 1;
                     
             }
             else{
                 const newItem = { ...action.payload, quantity: 1 }; // Add quantity property to the item
-                state.push(newItem);
+                state.cart.push(newItem);
             }
         },
 
@@ -21,18 +21,18 @@ const counterSlice = createSlice({
 
         delCounter: (state, action) => {
             const newItem = action.payload;
-            return state.filter(item => item.id !== newItem);
+            return state.cart.filter(item => item.id !== newItem);
         },
 
         ItemDecrease:(state, action) => {
-            const indexItem_dec = state.findIndex((index) => index.id === action.payload.id)
-            if(state[indexItem_dec].quantity > 1)
+            const indexItem_dec = state.cart.findIndex((index) => index.id === action.payload.id)
+            if(state.cart[indexItem_dec].quantity > 1)
             {
-              const deletItems=  state[indexItem_dec].quantity -= 1
-              console.log([...state, deletItems])
+              const deletItems=  state.cart[indexItem_dec].quantity -= 1
+              console.log([...state.cart, deletItems])
             }
             else if (state[indexItem_dec].quantity === 1) {
-                state.splice(indexItem_dec, 1);
+                state.cart.splice(indexItem_dec, 1);
               }
 
         }
