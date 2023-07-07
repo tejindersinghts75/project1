@@ -1,11 +1,11 @@
 {
   "files": {
     "main.css": "/project1/static/css/main.e17e4c19.css",
-    "main.js": "/project1/static/js/main.7dcafb43.js",
+    "main.js": "/project1/static/js/main.c8831444.js",
     "static/js/787.d3befce1.chunk.js": "/project1/static/js/787.d3befce1.chunk.js",
     "static/media/banner-2.2.png": "/project1/static/media/banner-2.2.16b667aa86885834ae36.png",
     "static/media/banner-1.1.png": "/project1/static/media/banner-1.1.66d84c634ca7057340c9.png",
-    "static/media/logo-2.svg": "/project1/static/media/logo-2.9b09b2cbcedf2e7be770da64c60feeeb.svg",
+    "static/media/logo-2.svg": "/project1/static/media/logo-2.06d7f95810ba63b6b9b5219f0fc6149b.svg",
     "static/media/lamp1-svgrepo-com.svg": "/project1/static/media/lamp1-svgrepo-com.d5f6d1b381b1483d1a31fc698928baba.svg",
     "static/media/bed-double-svgrepo-com.svg": "/project1/static/media/bed-double-svgrepo-com.7329d85de616ec61f5d7f87d3caba023.svg",
     "static/media/cupboard-tv-svgrepo-com.svg": "/project1/static/media/cupboard-tv-svgrepo-com.0bf16a222ea83f6f295b5a62203df35c.svg",
@@ -20,11 +20,11 @@
     "index.html": "/project1/index.html",
     "static/media/door-enter-svgrepo-com.svg": "/project1/static/media/door-enter-svgrepo-com.9ad64cb5d591a2bce222d1e8f0961fc4.svg",
     "main.e17e4c19.css.map": "/project1/static/css/main.e17e4c19.css.map",
-    "main.7dcafb43.js.map": "/project1/static/js/main.7dcafb43.js.map",
+    "main.c8831444.js.map": "/project1/static/js/main.c8831444.js.map",
     "787.d3befce1.chunk.js.map": "/project1/static/js/787.d3befce1.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e17e4c19.css",
-    "static/js/main.7dcafb43.js"
+    "static/js/main.c8831444.js"
   ]
 }
